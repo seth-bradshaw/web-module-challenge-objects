@@ -131,15 +131,16 @@ getLastReview(reviews);
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
-
- function getReviewByRating(arr, rating) {
-    for(let i = 0; i < 0; i++){
-      if(i === rating){
-        return arr[i]
-      }
-    }
-  }
-  getReviewByRating(reviews, 4)
+function getReviewByRating(arr, rating) {
+  let newArr = [];
+   for(let i = 0; i < arr.length; i++){
+     if(arr[i].rating === rating){
+       newArr.push(arr[i]);
+     }
+   }
+   return newArr;
+ }
+ console.log(getReviewByRating(reviews, 4));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
@@ -154,8 +155,13 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
+  function getLongReviews(arr) {
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i].includes(" ")){
+        console.log(arr)
+      }
+    }
   }
   
 
